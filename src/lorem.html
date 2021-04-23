@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/style.scss" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <!-- Contact -->
+        <div class="contact">
+          <button type="button" id="contact-open" class="big-button"></button>
+          <label for="contact-open">Contacte-moi</label>
+        </div>
+
+        <div class="lien">
+          <div class="menu-toggle"><span></span></div>
+          <nav>
+            <a href="index.html">Accueil</a>
+            <a href="weather.html">Météo</a>
+            <a href="lorem.html">Lorem</a>
+          </nav>
+        </div>
+      </div>
+      <!-- modal-contact -->
+      <div id="contactModal-container" class="contactModal-container">
+        <!-- design inspiration https://dribbble.com/shots/9917975-Neumorphism-Login-Test -->
+        <div class="modal">
+          <button id="contact-close">&times;</button>
+
+          <h3>N'hésitez pas à me laisser un message</h3>
+          <p>je repondrai au plus vite possible</p>
+
+          <form
+            name="contact"
+            method="post"
+            id="contact_form"
+            action="traitement_contact.php"
+          >
+            <small></small>
+            <input type="text" name="nom" placeholder="Nom *" />
+            <small></small>
+            <input type="email" name="email" placeholder="Email *" />
+            <input type="text" name="sujet" placeholder="Sujet" />
+            <input type="hidden" name="raison" />
+            <small></small>
+            <textarea
+              name="message"
+              rows="5"
+              cols="33"
+              placeholder="Message *"
+            ></textarea>
+            <input type="submit" name="envoyer" value="Envoyer le message" />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="banner--lorem">
+        <h1>Beauty & Lifestyle</h1>
+        <p>An online platform to deliver health, beauty, movement & joy</p>
+        <video autoplay loop width="500">
+          <source src="img/videoindex.mp4" type="video/mp4" />
+          <source src="img/videoindex.mp4" type="video/webm" />
+          <p>
+            Votre navigateur ne prend pas en charge les vidéos HTML5. Voici
+            <a href="img/videoindex.mp4">un lien pour télécharger la vidéo</a>.
+          </p>
+        </video>
+        <p>Video by Shiny Diamond from Pexels</p>
+      </section>
+      <section class="about--lorem">
+        <h2>About</h2>
+        <img src="./img/photo.png" alt="photo d'une femme devant un mirroir" />
+        <p>
+          <strong>Beauty&Lifestyle</strong>, founded by Jane Doe in April 2020,
+          is an online platform to provide educational courses to the public.
+        </p>
+        <p>
+          <em>The purpose of the company</em> is to educate people how to live a
+          natural lifestyle with better eating habits, with better self-care
+          habits and more physical movement.
+        </p>
+        <a href="">Read more</a>
+      </section>
+
+      <section class="online_projects">
+        <svg
+          class="wave"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
+          <path
+            fill="#fff"
+            fill-opacity="1"
+            d="M0,192L60,192C120,192,240,192,360,170.7C480,149,600,107,720,106.7C840,107,960,149,1080,144C1200,139,1320,85,1380,58.7L1440,32L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          ></path>
+        </svg>
+        <h2>Online Projects</h2>
+        <article>
+          <h3>Face Studio</h3>
+          <p>
+            An online platform to provide you with guidance on how to look after
+            your beauty with the most natural methods!
+          </p>
+          <p>
+            Face Studio will help you release, repair and renew your face as
+            well as add more confidence, radiance and glow to your presence
+            through facial exercises, massage techniques, the right diet and
+            much more!
+          </p>
+          <p>
+            Visit at the link below, choose the level you want to commit to and
+            start your journey with us!
+          </p>
+          <a href="">Read more</a>
+        </article>
+
+        <article>
+          <h3>Jane Doe Lifestyle</h3>
+          <p>
+            Lifestyle habits can build the health and success of one’s life.
+            However, many are not fully aware between the difference of positive
+            and negative habits, and their impact on physical and emotional
+            well-being. <strong>Beauty&Lifestyle</strong> and the founder Jane
+            Doe, a certified Health Coach, offer you to take your life into
+            control and learn the best tricks and tips through the courses and
+            consultations available online.
+          </p>
+          <p>
+            Visit the link below for private coaching programs and
+            <strong> say YES to living your best life! </strong>
+          </p>
+          <a href="">Read more</a>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p class="copyright">©<span>date</span> - mamady konte</p>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

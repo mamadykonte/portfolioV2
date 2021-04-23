@@ -1,0 +1,179 @@
+.menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 2rem;
+  top: 2rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease;
+  transform: scale(1.4);
+
+  &__burger {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 28px;
+    height: 3px;
+    background: set-text-color($primary-color);
+    @include transition-ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -8px;
+      width: 28px;
+      height: 3px;
+      background: set-text-color($primary-color);
+      @include transition-ease;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      width: 28px;
+      height: 3px;
+      background: set-text-color($primary-color);
+      @include transition-ease;
+    }
+
+    &.open {
+      transform: rotate(720deg);
+      background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+
+      &::after {
+        width: 28px;
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
+    }
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+
+  &.open {
+    visibility: visible;
+  }
+
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: $primary-color;
+    list-style-type: none;
+    padding-right: 1rem;
+    transform: translateY(-100%);
+    @include transition-ease;
+
+    &.open {
+      transform: translateY(0);
+    }
+
+    &__item {
+      transform: translateX(100vw);
+      @include transition-ease;
+
+      &.open {
+        transform: translateX(0);
+      }
+
+      &.active > a {
+        color: $secondary-color;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 2rem 1rem;
+      @include transition-ease;
+      cursor: pointer;
+
+      &:hover {
+        &::after {
+          background-color: $orange;
+          width: 100%;
+          transition: all 0.3;
+          animation: w100 1s ease-in backwards;
+        }
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background: $blue;
+        z-index: -1;
+      }
+      &::after {
+        background-color: $orange;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .menu-nav__item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
+}
+
+@include media-md {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+    position: relative;
+    width: 100%;
+    max-width: 70%;
+    border-radius: 15px;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      max-width: 100%;
+      height: auto;
+      background: transparent;
+      text-align: right;
+      transform: translateX(800px);
+      animation: translateX 0.8s 1.5s 1 ease-in-out forwards;
+
+      @include transition-ease;
+
+      &__item {
+        display: inline;
+        padding-right: 1rem;
+        max-width: 12%;
+      }
+
+      &__link {
+        font-size: 1.4rem;
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.banner--project {
+  height: 450px;
+  width: 100%;
+  background: rgb(241, 239, 239);
+  position: relative;
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+    position: absolute;
+    left: 52%;
+    top: 50%;
+    transform: rotate(351deg);
+  }
+
+  &__texture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url("../img/img1.jpg") center no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+  }
+
+  &__mask {
+    position: absolute;
+    bottom: 0;
+    background: 0 0;
+    height: 42px;
+    width: 100%;
+  }
+}
+
+.dev,
+.projects {
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
+.dev {
+  width: 100%;
+  margin: 5% 0;
+}
+
+.dev_card_container {
+  @include flexs(rows, space-around, center, wrap);
+}
+
+.dev_card {
+  position: relative;
+  text-align: center;
+  @include flexs(column, space-evenly, center, wrap);
+  background-color: $color_white;
+  padding: 2%;
+  margin: 4%;
+  border-radius: 5px;
+  box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.7),
+    5px 5px 10px rgba(0, 0, 0, 0.2), inset 5px 5px 10px rgba(0, 0, 0, 0);
+
+  h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  h4 {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    //mix-blend-mode: multiply;
+    z-index: -1;
+    transform: scale(1);
+    filter: blur(2px);
+  }
+  &::before {
+    @for $i from 1 through 10 {
+      animation: posdev 3.2s linear reverse infinite;
+      background-color: $orange;
+    }
+  }
+  &::after {
+    @for $i from 1 through 10 {
+      animation: posdev 2s linear reverse infinite;
+      background-color: $blue;
+    }
+  }
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) i {
+      background-image: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    }
+    &:nth-child(2n + #{$i}) i {
+      background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    }
+  }
+
+  &:nth-child(5) i {
+    color: transparent;
+    background: no-repeat center/cover url("../img/mysql.png"),
+      linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
+  }
+  &:nth-child(7) i {
+    color: transparent;
+    background: no-repeat center/cover url("../img/parceljs.webp"),
+      linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%);
+  }
+
+  i {
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    width: 5rem;
+    height: 4.5rem;
+    border-radius: 5px;
+    color: $white-3;
+  }
+}
+
+/* Galery*/
+
+.galery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.galery_photo {
+  margin: 2rem;
+}
+
+.galery_photo img {
+  border-radius: 5px;
+  object-fit: cover;
+}

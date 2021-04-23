@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/style.scss" />
+  </head>
+  <body class="dark">
+    
+      <header>
+        <div class="header">
+          <!-- Contact -->
+          <div class="contact">
+            <button type="button" id="contact-open" class="big-button"></button>
+            <label for="contact-open">Contacte-moi</label>
+          </div>
+
+          <div class="lien">
+            <div class="menu-toggle"><span></span></div>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="weather.html">Météo</a>
+                <a href="lorem.html">Lorem</a>
+            </nav>
+          </div>
+        </div>
+        <!-- modal-contact -->
+        <div id="contactModal-container" class="contactModal-container">
+          <!-- design inspiration https://dribbble.com/shots/9917975-Neumorphism-Login-Test -->
+          <div class="modal">
+            <button id="contact-close">&times;</button>
+
+            <h3>N'hésitez pas à me laisser un message</h3>
+            <p>je repondrai au plus vite possible</p>
+
+            <form
+              name="contact"
+              method="post"
+              id="contact_form"
+              action="traitement_contact.php"
+            >
+              <small></small>
+              <input type="text" name="nom" placeholder="Nom *" />
+              <small></small>
+              <input type="email" name="email" placeholder="Email *" />
+              <input type="text" name="sujet" placeholder="Sujet" />
+              <input type="hidden" name="raison"/>
+              <small></small>
+              <textarea
+                name="message"
+                rows="5"
+                cols="33"
+                placeholder="Message *"
+              ></textarea>
+              <input type="submit" name="envoyer" value="Envoyer le message" />
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <main>
+       
+        <!-- info city -->
+        <div class="container--weather">
+          <div class="weather_city">
+            <h1>Name city</h1>
+            <p>date of day</p>
+          </div>
+
+          <div class="container--weather_city">
+            <form id="weather">
+              <input
+                type="text"
+                class="weather_recherche"
+                placeholder="Recherchen ville"
+              />
+              <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+
+          <div class="air">
+            <p><span>4</span> <i class="fas fa-wind"></i></p>
+          </div>
+        </div>
+
+        <!-- weather city -->
+        <div class="weather">
+          <h2>Rain Showers</h2>
+          <h3>29°</h3>
+          <div class="info">
+            <p>Humidité: <span> 12% </span> <i class="fas fa-tint"></i></p>
+            <div class="temp">
+              <p>Min <span> 12°</span></p>
+              <p>Max <span> 40°</span></p>
+            </div>
+          </div>
+          <div class="icon"></div>
+         
+        </div>
+
+      </main>
+
+      <footer>
+        <p class="copyright">©<span>date</span> - mamady konte</p>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/weather.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

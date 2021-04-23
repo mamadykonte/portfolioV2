@@ -1,0 +1,261 @@
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  header {
+    padding: 0% 4%;
+    width: 100%;
+
+    
+
+    .contactModal-container.active {
+      .modal {
+        form {
+          textarea {
+            font-size: 2rem;
+          }
+          input {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+
+  .header {
+    .contact {
+      label {
+        font-size: 2rem;
+      }
+    }
+
+    .lien {
+      margin-top: 0;
+      .menu-toggle {
+        display: none;
+      }
+
+      nav {
+        position: relative;
+        @include flexs(rows, space-evenly, center, wrap);
+        padding: 0;
+
+        a {
+          position: relative;
+          color: $text;
+          font-weight: bolder;
+          font-size: 2rem;
+          margin-right: 2rem;
+          text-transform: uppercase;
+          z-index: 0;
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            top: 45%;
+            left: 0;
+            height: 5px;
+            width: 100%;
+            background: $blue;
+            z-index: -1;
+          }
+          &::after {
+            background-color: $orange;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .banner {
+    height: 85vh;
+  }
+  .container-info {
+    bottom: 0;
+    .info {
+      .box .title h1 {
+        font-size: 3rem;
+        span {
+          position: absolute;
+          right: -1rem;
+        }
+      }
+      .box .role p {
+        font-size: 1.2rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .more-projet .cta span {
+      font-size: 2.5rem;
+      vertical-align: middle;
+    }
+  }
+
+  /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+  /*ABOUT*/
+  /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+
+  #circle-container {
+    width: 35rem;
+    height: 35rem;
+
+    #circle {
+      transform: scale(2);
+
+      .rotrating-text {
+        font-size: 1.5rem;
+      }
+    }
+    .round {
+      top: 14%;
+      width: 25rem;
+      height: 25rem;
+    }
+  }
+
+  .about {
+    flex-direction: row;
+
+    .mamady,
+    .about_container_bloc {
+      width: 50%;
+    }
+    .dev {
+      width: 100%;
+    }
+    .dev_card {
+      h2 {
+        font-size: 2.2rem;
+      }
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 100;
+      }
+      i {
+        font-size: 4.5rem;
+        margin: 2rem 0;
+        width: 6rem;
+        height: 5.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .banner--lorem {
+    h1 {
+      font-size: 4rem;
+    }
+    p:first-of-type {
+      font-size: 1.6rem;
+      top: 60%;
+    }
+  }
+}
+@media screen and (max-width: 766px) {
+  .banner--lorem {
+    h1 {
+      font-size: 3.5rem;
+      @include center;
+      width: 100%;
+    }
+
+    h1 + p {
+      @include center;
+      width: 80%;
+    }
+
+    p + p {
+      font-size: 1rem;
+    }
+  }
+
+  .about--lorem,
+  .online_projects {
+    padding: 4% 8%;
+  }
+
+  .about--lorem {
+    margin: 0 auto;
+    text-align: center;
+    img {
+      float: none;
+      width: 50%;
+    }
+    p {
+      width: 100%;
+      margin: 10% 0;
+    }
+    a {
+      float: none;
+      margin: 0;
+    }
+  }
+  .online_projects {
+    article {
+      padding-right: 0;
+      width: 100%;
+      margin: 6% 0;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .banner--lorem {
+    h1 {
+      font-size: 3.5rem;
+      text-align: center;
+    }
+    p:first-of-type {
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+    video + p {
+      font-size: 0.8rem;
+    }
+  }
+  .about--lorem,
+  .online_projects {
+    p {
+      text-align: justify;
+      font-size: 1rem;
+    }
+  }
+  .about--lorem {
+    img {
+      float: none;
+      width: 50%;
+    }
+    a {
+      padding: 2% 5%;
+    }
+  }
+  .online_projects {
+    a {
+      padding: 2% 5%;
+    }
+    article:last-child {
+      padding-left: 0%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .banner--lorem {
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p:first-of-type {
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+    video + p {
+      font-size: 0.8rem;
+    }
+  }
+}

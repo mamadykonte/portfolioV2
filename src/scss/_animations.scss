@@ -1,0 +1,199 @@
+//ANIMATIONS stuff
+$hover: all 0.2s ease-in;
+$slide: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+$slide-delay: all 0.4s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+$slide-slow: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+$zoom: all 1s cubic-bezier(0.55, 0, 0.1, 1);
+$zoom-slow: all 2.4s cubic-bezier(0.55, 0, 0.1, 1);
+
+// @keyframes
+@keyframes translateX {
+  to {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+// loading
+
+@keyframes flash {
+  0% {
+    color: $blue;
+    text-shadow: 0 0 7px $blue;
+  }
+  90% {
+    color: $orange;
+    text-shadow: none;
+  }
+  100% {
+    color: $blue;
+    text-shadow: 0 0 7px $blue;
+  }
+}
+
+@keyframes posdev {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  12% {
+    top: 8%;
+    left: 0%;
+  }
+
+  36% {
+    top: 0%;
+    left: 8%;
+  }
+
+  60% {
+    top: -8%;
+    left: 0%;
+  }
+
+  84% {
+    top: 0%;
+    left: -8%;
+  }
+  100% {
+    top: 0%;
+    left: 0%;
+  }
+}
+
+@keyframes w100 {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blow {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -1000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes bordeRotate {
+  0% {
+    background-size: 0 0;
+  }
+  50% {
+    background-size: 30% 0;
+  }
+  100% {
+    background-size: 100% 0;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -94px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+/* banner info */
+
+@keyframes mainBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes secBlock {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes mainFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: $orange;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+  50% {
+    width: 10px;
+    height: 10px;
+    background: $orange;
+    opacity: 1;
+    bottom: 45px;
+  }
+  65% {
+    width: 7px;
+    height: 7px;
+    bottom: 0px;
+    width: 15px;
+  }
+  80% {
+    width: 10px;
+    height: 10px;
+    bottom: 20px;
+  }
+  100% {
+    width: 7px;
+    height: 7px;
+    background: $orange;
+    border: 0px solid #222;
+    bottom: 13px;
+  }
+}
+
+@keyframes secFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
