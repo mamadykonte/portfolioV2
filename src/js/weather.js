@@ -1,6 +1,6 @@
 import imgWn from "../img/wn/*.png";
 
-let token = "7890608a310e2557d5b7047968f1e62b";
+let token = "";
 
 /* appel API OpenWeather */
 let weather = function (city) {
