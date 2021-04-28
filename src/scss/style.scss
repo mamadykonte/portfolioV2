@@ -1,6 +1,5 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "reset";
 @import "color";
@@ -46,7 +45,7 @@ html {
 body {
   @include primary-font;
   color: $text;
-  background-color: white;
+  
 
   p {
     @include primary-font;
@@ -121,6 +120,7 @@ body {
 }
 .loaderNone {
   display: none;
+  overflow: hidden;
 }
 
 header {
@@ -165,7 +165,7 @@ header {
       position: absolute;
       top: 45%;
       left: 0;
-      height: 5px;
+      height: 1px;
       width: 100%;
       background: $blue;
       z-index: -1;
@@ -351,10 +351,10 @@ header {
   @include flexs(rows, space-between, center, nowrap);
 
   label {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-left: -94px;
     animation: slidein 3s ease 1 both;
-    font-weight: 600;
+    font-weight: 800;
     cursor: pointer;
     white-space: nowrap;
   }

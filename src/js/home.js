@@ -4,6 +4,8 @@ window.addEventListener("load", () => {
   loader.classList.add("loaderNone");
 });
 
+const banner = document.querySelector(".banner");
+
 document.addEventListener("mousemove", function (e) {
   let circle = document.createElement("div");
   circle.classList.add("circle-cursor");

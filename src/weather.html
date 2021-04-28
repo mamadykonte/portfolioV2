@@ -26,57 +26,85 @@
     <link rel="stylesheet" href="scss/style.scss" />
   </head>
   <body class="dark">
+     <!--  progress scroll -->
+     <a class="arrow" href="" id="arrow" title="Retour en haut de page">
+      <svg
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="49.5"
+          stroke="red"
+          class="circle"
+          pathLength="1"
+        />
+      </svg>
+    </a>
+
     
-      <header>
-        <div class="header">
-          <!-- Contact -->
-          <div class="contact">
-            <button type="button" id="contact-open" class="big-button"></button>
-            <label for="contact-open">Contacte-moi</label>
-          </div>
+    <header>
+      <!-- Contact -->
+      <div class="contact">
+        <button type="button" id="contact-open" class="big-button"></button>
+        <label for="contact-open">Contacte-moi</label>
+      </div>
 
-          <div class="lien">
-            <div class="menu-toggle"><span></span></div>
-            <nav>
-                <a href="index.html">Accueil</a>
-                <a href="weather.html">Météo</a>
-                <a href="lorem.html">Lorem</a>
-            </nav>
-          </div>
+      <div class="menu-btn">
+        <span class="menu-btn__burger"></span>
+      </div>
+
+      <nav class="nav">
+        <ul class="menu-nav">
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link"> Accueil </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="index.html" class="menu-nav__link"> À Propos de moi </a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="weather.html" class="menu-nav__link"> Projet </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- modal-contact -->
+      <div id="contactModal-container" class="contactModal-container">
+        <!-- design inspiration https://dribbble.com/shots/9917975-Neumorphism-Login-Test -->
+        <div class="modal">
+          <button id="contact-close">&times;</button>
+
+          <h3>N'hésitez pas à me laisser un message</h3>
+          <p>je repondrai au plus vite possible</p>
+
+          <form
+            name="contact"
+            method="post"
+            id="contact_form"
+            action="traitement_contact.php"
+          >
+            <small></small>
+            <input type="text" name="nom" placeholder="Nom *" />
+            <small></small>
+            <input type="email" name="email" placeholder="Email *" />
+            <input type="text" name="sujet" placeholder="Sujet" />
+            <input type="hidden" name="raison" />
+            <small></small>
+            <textarea
+              name="message"
+              rows="5"
+              cols="33"
+              placeholder="Message *"
+            ></textarea>
+            <input type="submit" name="envoyer" value="Envoyer le message" />
+          </form>
         </div>
-        <!-- modal-contact -->
-        <div id="contactModal-container" class="contactModal-container">
-          <!-- design inspiration https://dribbble.com/shots/9917975-Neumorphism-Login-Test -->
-          <div class="modal">
-            <button id="contact-close">&times;</button>
-
-            <h3>N'hésitez pas à me laisser un message</h3>
-            <p>je repondrai au plus vite possible</p>
-
-            <form
-              name="contact"
-              method="post"
-              id="contact_form"
-              action="traitement_contact.php"
-            >
-              <small></small>
-              <input type="text" name="nom" placeholder="Nom *" />
-              <small></small>
-              <input type="email" name="email" placeholder="Email *" />
-              <input type="text" name="sujet" placeholder="Sujet" />
-              <input type="hidden" name="raison"/>
-              <small></small>
-              <textarea
-                name="message"
-                rows="5"
-                cols="33"
-                placeholder="Message *"
-              ></textarea>
-              <input type="submit" name="envoyer" value="Envoyer le message" />
-            </form>
-          </div>
-        </div>
-      </header>
+      </div>
+    </header>
 
       <main>
        
@@ -125,11 +153,7 @@
       </footer>
     </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
-      crossorigin="anonymous"
-    ></script>
+
     <script src="js/weather.js"></script>
     <script src="js/index.js"></script>
   </body>

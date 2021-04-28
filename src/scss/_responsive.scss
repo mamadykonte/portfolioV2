@@ -1,13 +1,12 @@
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+    padding: 0 1%;
   }
 
   header {
     padding: 0% 4%;
     width: 100%;
-
-    
 
     .contactModal-container.active {
       .modal {
@@ -23,97 +22,26 @@
     }
   }
 
-  .header {
-    .contact {
-      label {
-        font-size: 2rem;
-      }
-    }
-
-    .lien {
-      margin-top: 0;
-      .menu-toggle {
-        display: none;
-      }
-
-      nav {
-        position: relative;
-        @include flexs(rows, space-evenly, center, wrap);
-        padding: 0;
-
-        a {
-          position: relative;
-          color: $text;
-          font-weight: bolder;
-          font-size: 2rem;
-          margin-right: 2rem;
-          text-transform: uppercase;
-          z-index: 0;
-
-          &::before,
-          &::after {
-            content: "";
-            position: absolute;
-            top: 45%;
-            left: 0;
-            height: 5px;
-            width: 100%;
-            background: $blue;
-            z-index: -1;
-          }
-          &::after {
-            background-color: $orange;
-            width: 50%;
-          }
-        }
-      }
-    }
-  }
-
-  .banner {
-    height: 85vh;
-  }
-  .container-info {
-    bottom: 0;
-    .info {
-      .box .title h1 {
-        font-size: 3rem;
-        span {
-          position: absolute;
-          right: -1rem;
-        }
-      }
-      .box .role p {
-        font-size: 1.2rem;
-        margin-top: 2rem;
-      }
-    }
-
-    .more-projet .cta span {
-      font-size: 2.5rem;
-      vertical-align: middle;
-    }
-  }
-
   /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
   /*ABOUT*/
   /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
 
   #circle-container {
-    width: 35rem;
-    height: 35rem;
+    width: 22rem;
+    height: 22rem;
+    top: 16%;
 
     #circle {
-      transform: scale(2);
+      transform: scale(1.9);
 
       .rotrating-text {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
     }
     .round {
-      top: 14%;
-      width: 25rem;
-      height: 25rem;
+      top: 15%;
+      width: 15rem;
+      height: 15rem;
     }
   }
 
@@ -145,6 +73,48 @@
   }
 }
 
+@media screen and (min-width: 800px) {
+  .banner {
+    height: 88vh;
+  }
+
+  .contact {
+    label {
+      font-size: 1.6rem;
+    }
+  }
+
+  .nav .menu-nav__link {
+    padding: 0 0.9rem;
+
+    &::before,
+    &::after {
+      height: 6px;
+    }
+  }
+
+  .container-info {
+    bottom: 0;
+    .info {
+      .box .title h1 {
+        font-size: 2.3rem;
+        span {
+          position: absolute;
+          right: -1rem;
+        }
+      }
+      .box .role p {
+        font-size: 1.1rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .more-projet .cta span {
+      font-size: 2rem;
+      vertical-align: middle;
+    }
+  }
+}
 @media screen and (max-width: 945px) {
   .banner--lorem {
     h1 {
@@ -156,6 +126,7 @@
     }
   }
 }
+
 @media screen and (max-width: 766px) {
   .banner--lorem {
     h1 {

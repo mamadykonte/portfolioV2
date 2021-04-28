@@ -1,12 +1,9 @@
-
-
 body.dark {
-  font-family: "Spartan", sans-serif;
   color: $text;
   background-color: $weather_1;
 
   p {
-    font-size: 1.4rem;
+    font-size: 1rem;
     color: $white-1;
   }
   h1,
@@ -15,11 +12,11 @@ body.dark {
   h4,
   h5,
   h6 {
-    font-family: "Poppins", sans-serif;
+    /*font-family: "Poppins", sans-serif;*/
+
     color: $white-1;
   }
 }
-
 
 .container {
   width: 100%;
@@ -41,7 +38,7 @@ body.dark {
 
     input {
       outline: none;
-      font-size: 2rem;
+      font-size: 1.2rem;
       background-color: transparent;
       border: none;
       text-align: center;
@@ -75,7 +72,7 @@ body.dark {
       }
 
       i {
-        font-size: 2rem;
+        font-size: 1.2rem;
         color: $white-1;
         padding-bottom: 0.5rem;
       }
@@ -89,7 +86,7 @@ body.dark {
 
   .weather_city {
     h1 {
-      font-size: 2rem;
+      font-size: 1.2rem;
       text-align: center;
     }
     p {
@@ -130,11 +127,12 @@ body.dark {
     $white-1 160%
   );
   h2 {
-    font-size: 2rem;
+    font-size: 1.2rem;
     margin-top: 1rem;
   }
   h3 {
-    font-size: 8rem;
+    font-size: 4rem;
+    font-weight: 800;
   }
 
   .info {
@@ -145,20 +143,20 @@ body.dark {
     color: black;
 
     p {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       span {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
       }
       i {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
       }
     }
     .temp {
       p {
         font-weight: bold;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         span {
-          font-size: 1.6rem;
+          font-size: 1.3rem;
         }
       }
     }
@@ -169,6 +167,50 @@ body.dark {
 
     img {
       width: 122px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container--weather {
+    flex-direction: column;
+
+    &_city {
+      width: 100%;
+    }
+
+    .weather_city {
+      order: 1;
+      margin: 2rem 0;
+    }
+    .air {
+      order: 2;
+    }
+  }
+
+  .weather {
+    background-image: radial-gradient(
+      circle farthest-corner at -2% 4%,
+      #fbe1b7 1.1%,
+      #0396ff 18.7%,
+      #dfe4eb 160%
+    );
+    height: auto;
+    padding: 5% 0;
+    .info {
+      flex-direction: column;
+      order: 1;
+      margin: 2rem 0;
+    }
+
+    .temp {
+      p {
+        margin-top: 2rem;
+      }
+    }
+
+    .icon {
+      margin: 1rem 0;
     }
   }
 }

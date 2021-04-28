@@ -12,6 +12,8 @@
 //   }
 // }
 
+
+
 /* Menu Hamburger*/
 const menuBtn = document.querySelector(".menu-btn");
 const hamburger = document.querySelector(".menu-btn__burger");
@@ -63,7 +65,7 @@ window.addEventListener("scroll", () => {
 
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     arrow.classList.add("active");
-    let val = `${Math.floor(getScrollPercentage() * 100 -1)}%`;
+    let val = `${Math.floor(getScrollPercentage() * 100 - 1)}%`;
     arrow.setAttribute("data-value", val);
   } else {
     arrow.classList.remove("active");
@@ -77,56 +79,6 @@ function getScrollPercentage() {
 }
 
 updateProgresseScroll();
-
-// menu
-// var theToggle = document.querySelector(".menu-toggle");
-// // hasClass
-// function hasClass(elem, className) {
-//   return new RegExp(" " + className + " ").test(" " + elem.className + " ");
-// }
-// // addClass
-// function addClass(elem, className) {
-//   if (!hasClass(elem, className)) {
-//     elem.className += " " + className;
-//   }
-// }
-// // removeClass
-// function removeClass(elem, className) {
-//   var newClass = " " + elem.className.replace(/[\t\r\n]/g, " ") + " ";
-//   if (hasClass(elem, className)) {
-//     while (newClass.indexOf(" " + className + " ") >= 0) {
-//       newClass = newClass.replace(" " + className + " ", " ");
-//     }
-//     elem.className = newClass.replace(/^\s+|\s+$/g, "");
-//   }
-// }
-
-// // fermé le menu s'il scroll masque le menu lien
-// function onScroll() {
-//   if ("scroll" && $("nav").css("display") === "block") {
-//     $(".menu-toggle").removeClass("on");
-//   }
-// }
-// window.addEventListener("scroll", onScroll);
-
-// // meu
-// // toggleClass
-// function toggleClass(elem, className) {
-//   var newClass = " " + elem.className.replace(/[\t\r\n]/g, " ") + " ";
-//   if (hasClass(elem, className)) {
-//     while (newClass.indexOf(" " + className + " ") >= 0) {
-//       newClass = newClass.replace(" " + className + " ", " ");
-//     }
-//     elem.className = newClass.replace(/^\s+|\s+$/g, "");
-//   } else {
-//     elem.className += " " + className;
-//   }
-// }
-
-// theToggle.onclick = function () {
-//   toggleClass(this, "on");
-//   return false;
-// };
 
 const open = document.getElementById("contact-open");
 const close = document.getElementById("contact-close");
